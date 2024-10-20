@@ -1,0 +1,390 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+<title>SecretGarden</title>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .btn-custom-dark {
+        background-color: rgb(5, 3, 4);
+        color: white;
+    }
+
+    .btn-custom-dark:hover {
+        background-color: #343a40;
+        color: white;
+    }
+
+    .card-img-left {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    .rounded-circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .full-screen-section {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .h-100 {
+        height: 100%;
+    }
+
+    .section-container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .section-container .full-screen-section:first-child {
+        flex: 2;
+        /* Большая часть экрана */
+    }
+
+    .section-container .full-screen-section:last-child {
+        flex: 1;
+        /* Меньшая часть экрана */
+    }
+
+    .section-container .full-screen-section-last:first-child {
+        flex: 2;
+        /* Большая часть экрана */
+    }
+
+    .section-container .full-screen-section-last:last-child {
+        flex: 1;
+        /* Меньшая часть экрана */
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="section-container">
+    <!-- раздел Home -->
+    <div class="full-screen-section" style="background-color: rgb(237, 238, 241); padding-top: 100px;" id="home">
+        <div class="container mt-5 h-100 d-flex align-items-center justify-content-center">
+            <div class="row w-100">
+                <!-- Левая колонка -->
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h1 class="display-4" style="font-weight: 600;">Подарите цветы своей любимой</h1>
+                    <p class="lead"
+                        style="font-weight: 400; color: rgb(118, 119, 121); padding-top: 15px; padding-bottom: 15px;">Мы
+                        гордимся
+                        разнообразием,
+                        яркими
+                        цветами и
+                        экологичностью
+                        наших товаров, что придаст
+                        вам уверенности в выборе.</p>
+                    <button class="btn btn-custom-dark rounded-pill mb-4">Начать покупки</button>
+
+                    <!-- Маленькие карточки -->
+                    <div class="row" style="padding-top: 50px;">
+                        <div class="col-12 col-sm-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body d-flex align-items-center">
+                                    <img src="{% static 'flowers/daisies.JPG' %}" class="card-img-left" alt="Flower 1">
+                                    <div class="ml-3" style="padding-left: 10px;">
+                                        <h5 class="card-title">Ромашки</h5>
+                                        <p class="card-text">3 900 ₽</p>
+                                        <a href="#" class="text-muted" style="text-decoration: none;">Подробнее -></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body d-flex align-items-center">
+                                    <img src="{% static 'flowers/tulips.JPG' %}" class="card-img-left" alt="Flower 2">
+                                    <div class="ml-3" style="padding-left: 10px;">
+                                        <h5 class="card-title">Тюльпаны</h5>
+                                        <p class="card-text">8 460 ₽</p>
+                                        <a href="#" class="text-muted" style="text-decoration: none;">Подробнее -></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Правая колонка -->
+                <div class="col-md-6">
+                    <img src="{% static 'flowers/woman2.png' %}" class="img-fluid" style="height: 650px;"
+                        alt="Girl with flowers">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- раздел на темном фоне -->
+    <div class="full-screen-section" style="background-color: rgb(7, 6, 5); color: white; padding: 50px 0;">
+        <div class="container text-center h-100 d-flex align-items-center justify-content-center">
+            <div class="row w-100">
+                <div class="col-12 col-sm-6 col-md-3 mb-4">
+                    <h2>3000+</h2>
+                    <p>Проданных наборов</p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 mb-4">
+                    <h2>5000+</h2>
+                    <p>Проданных букетов</p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 mb-4">
+                    <h2>7000+</h2>
+                    <p>Счастливых клиентов</p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 mb-4">
+                    <h2>25+</h2>
+                    <p>Лет опыта</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section-container">
+    <!-- раздел Our Service -->
+    <div class="full-screen-section" style="background-color: white;" id="our-services">
+        <div class="container h-100 d-flex align-items-center justify-content-center">
+            <div class="row w-100">
+                <!-- Левая колонка с картинкой -->
+                <div class="col-md-6 mb-4 mb-md-0 text-center">
+                    <img src="https://via.placeholder.com/500x300" class="img-fluid rounded" alt="Our Service">
+                </div>
+                <!-- Правая колонка с текстом -->
+                <div class="col-md-6">
+                    <h6 class="text-muted">Наши услуги</h6>
+                    <h2 class="display-5">Цветочные букеты и подарки</h2>
+                    <p class="lead">Мы предлагаем широкий выбор цветов и подарков для любого случая. Наши букеты
+                        создаются с любовью и заботой, чтобы доставить радость и красоту в вашу жизнь.</p>
+                    <button class="btn btn-custom-dark rounded-pill">Узнать больше</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- раздел на сером фоне -->
+    <div class="full-screen-section" style="background-color: rgb(237, 238, 241); color: white;">
+        <div class="container h-100 d-flex align-items-center justify-content-center">
+            <div class="row w-100 text-center">
+                <div class="col-12 col-sm-6 col-md-3 mb-4">
+                    <img src="https://via.placeholder.com/300x200" class="img-fluid rounded" style="width: 100%;">
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 mb-4">
+                    <img src="https://via.placeholder.com/300x200" class="img-fluid rounded" style="width: 100%;">
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 mb-4">
+                    <img src="https://via.placeholder.com/300x200" class="img-fluid rounded" style="width: 100%;">
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 mb-4">
+                    <img src="https://via.placeholder.com/300x200" class="img-fluid rounded" style="width: 100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section-container">
+    <!-- раздел с отзывами -->
+    <div class="full-screen-section-last" style="background-color: white; padding: 50px 0;" id="reviews">
+        <div class="container h-100 d-flex flex-column justify-content-center align-items-center">
+            <div class="row w-100">
+                <div class="col-md-6">
+                    <h2 class="text-start">Есть сомнения?</h2>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <button class="btn btn-outline-dark rounded-circle" style="height: 48px;" id="prevBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#5f6368">
+                            <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z" />
+                        </svg>
+                    </button>
+                    <button class="btn btn-outline-dark rounded-circle" style="height: 48px;" id="nextBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#5f6368">
+                            <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="row mt-4" id="reviewsContainer">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="{% static 'reviews/man1.jpg' %}" class="rounded-circle" alt="Avatar">
+                                <h5 class="card-title mb-0" style="padding-left: 10px;">Иван Иванов</h5>
+                            </div>
+                            <p class="card-text">Отличный сервис! Букеты всегда свежие и красивые. Рекомендую! Особенно
+                                порадовала возможность выбора из широкого ассортимента.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="{% static 'reviews/woman1.jpg' %}" class="rounded-circle" alt="Avatar">
+                                <h5 class="card-title mb-0" style="padding-left: 10px;">Мария Петрова</h5>
+                            </div>
+                            <p class="card-text">Всегда довольна покупками здесь. Цветы долго стоят и имеют приятный
+                                аромат. Особое спасибо за внимательность и индивидуальный подход к каждому клиенту.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="{% static 'reviews/man2.jpg' %}" class="rounded-circle" alt="Avatar">
+                                <h5 class="card-title mb-0" style="padding-left: 10px;">Алексей Сидоров</h5>
+                            </div>
+                            <p class="card-text">Быстрая доставка и качественные цветы. Спасибо за отличный сервис!
+                                Особенно порадовала возможность указать особые пожелания, и они были учтены.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="{% static 'reviews/woman2.jpg' %}" class="rounded-circle" alt="Avatar">
+                                <h5 class="card-title mb-0" style="padding-left: 10px;">Мария Иванова</h5>
+                            </div>
+                            <p class="card-text">Заказывала цветы в подарок на день рождения. Букет был просто
+                                восхитителен! Доставка вовремя, все цветы свежие и красиво упакованы. Огромное спасибо!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="{% static 'reviews/man3.jpg' %}" class="rounded-circle" alt="Avatar">
+                                <h5 class="card-title mb-0" style="padding-left: 10px;">Иван Петров</h5>
+                            </div>
+                            <p class="card-text">Отличный выбор цветов и быстрая доставка. Я очень доволен качеством
+                                обслуживания. Буду рекомендовать друзьям!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="{% static 'reviews/woman3.jpg' %}" class="rounded-circle" alt="Avatar">
+                                <h5 class="card-title mb-0" style="padding-left: 10px;">Елена Смирнова</h5>
+                            </div>
+                            <p class="card-text">Заказывала цветы на юбилей. Все прошло на ура! Букет был просто
+                                фантастический, а доставка была оперативной. Спасибо за отличный сервис!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- раздел подписки на рассылку -->
+    <div class="full-screen-section-last" style="background-color: black; color: white; padding: 50px 0;">
+        <div class="container h-100 d-flex align-items-center justify-content-center">
+            <div class="row w-100">
+                <!-- Левая колонка с картинкой -->
+                <div class="col-md-6">
+                    <img src="https://via.placeholder.com/500x300" class="img-fluid rounded" alt="Subscribe">
+                </div>
+                <!-- Правая колонка с текстом -->
+                <div class="col-md-6">
+                    <h2 class="display-5">Подпишитесь на нашу рассылку</h2>
+                    <p class="lead">Подпишитесь на нашу рассылку, чтобы получать последние новости и специальные
+                        предложения.</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Введите ваш Email" aria-label="Email"
+                            aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-custom-dark" type="button">Подписаться</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const reviewsContainer = document.getElementById('reviewsContainer');
+    const reviews = Array.from(reviewsContainer.children);
+    const totalReviews = reviews.length;
+    const reviewsPerPage = 3;
+    let currentPage = 0;
+
+    function showReviews() {
+        reviews.forEach((review, index) => {
+            if (index >= currentPage * reviewsPerPage && index < (currentPage + 1) * reviewsPerPage) {
+                review.classList.remove('hidden');
+            } else {
+                review.classList.add('hidden');
+            }
+        });
+    }
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+        if (currentPage > 0) {
+            currentPage--;
+            showReviews();
+        }
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+        if (currentPage < Math.ceil(totalReviews / reviewsPerPage) - 1) {
+            currentPage++;
+            showReviews();
+        }
+    });
+
+    // Инициализация
+    showReviews();
+
+
+
+    // плавная прокрутка
+    // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    //     anchor.addEventListener('click', function (e) {
+    //         e.preventDefault();
+
+    //         const targetId = this.getAttribute('href').substring(1);
+    //         const targetElement = document.getElementById(targetId);
+    //         const navbarHeight = document.querySelector('.fixed-navbar').offsetHeight;
+
+    //         if (targetElement) {
+    //             window.scrollTo({
+    //                 top: targetElement.offsetTop - navbarHeight,
+    //                 behavior: 'smooth'
+    //             });
+    //         }
+    //     });
+    // });
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+{% endblock %}
