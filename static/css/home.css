@@ -1,0 +1,78 @@
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Устанавливаем высоту hero-section на 100% высоты видимой области */
+#hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Добавьте фоновый цвет или изображение */
+}
+
+.fixed-size {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.fixed-size:hover {
+    transform: scale(1.2);
+}
+
+.footer-image {
+    margin-top: -100px;
+    /* Отрицательный margin для выхода за пределы футера */
+    z-index: 100;
+    /* Чтобы изображение было поверх футера */
+    position: relative;
+}
+
+footer {
+    position: relative;
+    z-index: 50;
+    /* Чтобы футер был под изображением */
+}
+
+.lead {
+    font-weight: 400;
+    color: rgb(125, 126, 129);
+}
+
+h2 {
+    font-weight: 600;
+    color: rgb(25, 21, 35);
+}
+
+.btn-dark {
+    background-color: rgb(5, 3, 4);
+}
+
+.btn-outline-dark:hover svg {
+    fill: #fff;
+}
+
+
+.nav-link {
+    color: rgb(125, 126, 129);
+}
+
+@media(min-width: 768px) {
+    .news-input {
+        width: 50%;
+    }
+}
